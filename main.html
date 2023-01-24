@@ -43,9 +43,16 @@
   </div>
 
   <script>
+	document.querySelectorAll(".align-left slide-in").className= "active";
+    document.querySelectorAll(".align-right slide-in").className= "active";
+    document.getElementsByTagName("img").className= debounce;
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
+      document.getElementsByTagName("img").style.debounce =debounce;
+
       return function() {
+
+
         var context = this, args = arguments;
         var later = function() {
           timeout = null;
@@ -57,7 +64,6 @@
         if (callNow) func.apply(context, args);
       };
     }
-
   </script>
 
   <style>
